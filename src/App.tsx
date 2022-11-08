@@ -1,7 +1,10 @@
+import { GlobalStyle } from "./styles/global"
+
 export const App = () => {
   return(
-    <>
-    <h1>DT Money</h1>
-    </>
+    <div className="app">
+      <h1>DT MOney</h1>
+    <GlobalStyle />
+    </div>
   )
 }
