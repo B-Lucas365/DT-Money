@@ -4,13 +4,13 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: -6.5rem;
+    margin-top: -8rem;
 
     div{
-        background: #EEE3CB;
+        background: var(--lightcolor);
         padding: 1.5rem 2rem;
         border-radius:5px;
-        color: #A69571;
+        color: var(--goldcolor);
 
         header{
             display: flex;
@@ -27,10 +27,9 @@ export const Container = styled.div`
         }
 
         &.highLight-background{
-            background: #A69571;
-            color: #ffff;
+            background: var(--goldcolor);
+            color: var(--whitecolor);
         }
     }
-
 
 `
