@@ -66,7 +66,7 @@ export const RadioBox = styled.button<RadioBoxProps>`
     height: 4rem;
     border: 1px solid #B7B7B7;
     border-radius: 5px;
-    background: ${(props) => props.isActive ? 'transparent' : '#E8E8E8'};
+    background: ${(props) => props.isActive ? '#A69571' : 'transparent'};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +79,7 @@ export const RadioBox = styled.button<RadioBoxProps>`
         display: inline-block;
         margin-left: 1rem;
         font-size: 1rem;
-        color: var(--goldcolor);
+        color: ${(props) => props.isActive ? 'var(--whitecolor)' : '--goldcolor'};
+        /* color: var(--goldcolor); */
     }
 `

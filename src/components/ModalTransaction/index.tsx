@@ -1,10 +1,13 @@
 import Modal from 'react-modal'
 import close from '../../assets/Close.svg'
 import { Container, TransactionTypes, RadioBox } from './styles';
-import incomeImg from "../../assets/Entrada.svg"
-import outcomeImg from "../../assets/Saidas.svg"
 import { useState } from 'react';
 
+import incomeImg from "../../assets/Entrada.svg"
+import outcomeImg from "../../assets/Saidas.svg"
+
+import incomeImgWhite from "../../assets/EntradaBranco.svg"
+import outcomeImgWhite from "../../assets/SaidasBranco.svg"
 
 
 interface ModalTransactionProps {
@@ -37,7 +40,8 @@ export const ModalTransaction = ({isOpen, onRequestClose}: ModalTransactionProps
                         isActive={type === "deposit"}
                         onClick={() => {setType("deposit")}}
                     >
-                        <img src={incomeImg} alt="Income" />
+                        {type === "deposit" && <img src={incomeImgWhite} alt="Income" />}
+                        {type !== "deposit" && <img src={incomeImg} alt="Income" />}
                         <span>Entrada</span>
                     </RadioBox>
 
@@ -46,7 +50,8 @@ export const ModalTransaction = ({isOpen, onRequestClose}: ModalTransactionProps
                         isActive={type === "withdraw"}
                         onClick={() => {setType("withdraw")}}
                     >
-                        <img src={outcomeImg} alt="Outcome" />
+                        {type === "withdraw" && <img src={outcomeImgWhite} alt="Income" />}
+                        {type !== "withdraw" && <img src={outcomeImg} alt="Income" />}
                         <span>Saída</span>
                     </RadioBox>
                 </TransactionTypes>
